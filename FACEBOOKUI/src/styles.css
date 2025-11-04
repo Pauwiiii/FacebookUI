@@ -1,0 +1,96 @@
+:root{
+  --max-width: 850px;
+  --bg: #f7f8fb;
+  --card: #fff;
+  --muted: #666;
+  --danger: #e03e2d;
+  --primary: #1877f2;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  padding:24px;
+  display:flex;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+}
+
+.container header {
+  text-align: center;
+  color: #1877f2;
+}
+
+header{ margin-bottom: 18px; }
+header h1 { margin: 0 0 6px 0; }
+
+.create-section, .list-section, .edit-section {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+  margin-bottom: 14px;
+}
+
+.post-list { display:flex; flex-direction:column; gap:12px; }
+
+.post-item {
+  border: 1px solid rgba(16,24,40,0.06);
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.post-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:12px;
+}
+
+.post-author { font-size: 1.02rem; }
+.post-meta { color:var(--muted); font-size:0.875rem; }
+
+.post-content p { margin: 8px 0; white-space:pre-wrap; }
+.post-image img { max-width:100%; border-radius:6px; margin-top:8px; }
+
+.post-actions { display:flex; gap:8px; margin-top:10px; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor:pointer;
+}
+.btn:disabled { opacity: 0.6; cursor: default; }
+
+.btn-secondary {
+  background: #e6eefc;
+  color: var(--primary);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.post-form .form-row { margin-bottom: 10px; display:flex; flex-direction:column; gap:6px; }
+.post-form label { font-weight:600; font-size:0.9rem; }
+.post-form input, .post-form textarea {
+  padding:8px;
+  border-radius:6px;
+  border:1px solid rgba(16,24,40,0.08);
+  font-size:0.95rem;
+}
+
+.error-list { color: var(--danger); margin: 0 0 8px 0; padding-left: 18px; }
+
+footer { margin-top: 14px; color: var(--muted); font-size:0.9rem; text-align:center; }
